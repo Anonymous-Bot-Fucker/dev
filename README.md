@@ -13,3 +13,32 @@ Preview the gif below to get a quick demo of github.dev in action.
 
 # Why?
 It’s a quick way to edit and navigate code. It's especially useful if you want to edit multiple files at a time or take advantage of all the powerful code editing features of Visual Studio Code when making a quick change. For more information, see our [documentation](https://github.co/codespaces-editor-help).
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    package="com.facebook.common">
+        <queries>
+                <package android:name="com.facebook.katana" />
+                    </queries>
+                     
+                         <application>
+                          
+                                  <activity
+                                              android:name="com.facebook.FacebookActivity"
+                                                          android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                                                                      android:theme="@style/com_facebook_activity_theme" />
+                                                                       
+                                                                               <activity android:name="com.facebook.CustomTabMainActivity" />
+                                                                                       <activity
+                                                                                                   android:name="com.facebook.CustomTabActivity"
+                                                                                                               android:exported="true"
+                                                                                                                           tools:node="merge">
+                                                                                                                                       <intent-filter>
+                                                                                                                                                       <action android:name="android.intent.action.VIEW" />
+                                                                                                                                                                       <category android:name="android.intent.category.DEFAULT" />
+                                                                                                                                                                                       <category android:name="android.intent.category.BROWSABLE" />
+                                                                                                                                                                                                       <data android:scheme="fbconnect" android:host="cct.${applicationId}"/>
+                                                                                                                                                                                                                   </intent-filter>
+                                                                                                                                                                                                                           </activity>
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                </application>
+                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                 </manifest>
